@@ -2,6 +2,11 @@ import heroImage from "../assets/LandingPage/heroimage.png";
 import aboutOne from "../assets/LandingPage/about-one.png";
 import aboutTwo from "../assets/LandingPage/about-two.png";
 import aboutThree from "../assets/LandingPage/about-three.png";
+import ourProjectsOne from "../assets/OurProjects/ourprojects-one.png";
+import ourProjectsTwo from "../assets/OurProjects/ourprojects-two.png";
+import ourProjectsThree from "../assets/OurProjects/ourprojects-three.png";
+import ourProjectsFour from "../assets/OurProjects/ourprojects-four.png";
+import ourProjectsFive from "../assets/OurProjects/ourprojects-five.png";
 import { LeftArrowIcon, RightArrowIcon } from "../assets/icons";
 export default function LandingPage() {
 	return (
@@ -9,6 +14,8 @@ export default function LandingPage() {
 			<HeroSection />
 			<AboutSection />
 			<MissionStatement />
+			<OurProjects />
+			<ContactUs />
 		</>
 	);
 }
@@ -59,17 +66,17 @@ const HeroSection = () => {
 
 const AboutSection = () => {
 	return (
-		<section className="mt-[120px] mb-[150px] bg-[#FBFBFB] py-[30px] mx-auto w-full max-w-[1170px] flex gap-[30px] h-[435px]">
+		<section className="mt-[120px] mb-[150px] bg-[#FBFBFB] py-[30px] mx-auto w-full max-w-[1170px] flex gap-[30px] h-[435px] px-6 xl:px-0">
 			<aside className="w-full ml-[100px] max-w-[570px] flex gap-[30px] items-start">
 				<div className="flex flex-col items-start gap-[30px]">
-					<img src={aboutOne} alt="" />
-					<img src={aboutTwo} alt="" />
+					<img src={aboutOne} alt="" className="w-full max-w-[270px]" />
+					<img src={aboutTwo} alt="" className="w-full max-w-[270px]" />
 				</div>
-				<img src={aboutThree} alt="" className="mt-[30px]" />
+				<img src={aboutThree} alt="" className="mt-[30px] w-full max-w-[270px]" />
 			</aside>
-			<aside className="flex flex-col w-full max-w-[400px]">
-				<h1 className="font-light text-[#BDBDBD] text-[4rem] leading-[64px]">About</h1>
-				<p className="font-light">
+			<aside className="flex flex-col w-full max-w-[400px] mr-[70px]">
+				<h1 className="font-light text-[#BDBDBD] text-[4rem] leading-[64px] mb-[20px]">About</h1>
+				<p className="font-light mb-[45px]">
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
 					been the industry's standard dummy text ever since the 1500s, when an unknown printer took
 					a galley of type and scrambled it to make a type specimen book. It has survived not only
@@ -121,5 +128,38 @@ const MissionStatement = () => {
 };
 
 const OurProjects = () => {
+	return (
+		<section className="mt-[120px] mb-[150px] py-[30px] mx-auto w-full max-w-[1170px] flex flex-col gap-[30px]">
+			<h1 className="font-light text-[#BDBDBD] text-[4rem] leading-[64px] mb-[20px]">
+				Our Projects
+			</h1>
+
+			<div className="flex flex-col gap-[30px]">
+				<div className="flex gap-[30px]">
+					<figure>
+						<img src={ourProjectsOne} alt="" />
+					</figure>
+					<img src={ourProjectsTwo} alt="" />
+				</div>
+				<div className="flex gap-[30px]">
+					<img src={ourProjectsThree} alt="" />
+					<img src={ourProjectsFour} alt="" />
+					<img src={ourProjectsFive} alt="" />
+				</div>
+			</div>
+			<button
+				type="button"
+				className=" bg-[#333333] w-[222px] h-[71px] flex items-center justify-center gap-[18px] px-[20px]"
+			>
+				<p className="tracking-[0.2em] text-[12px] leading-[12px] text-white">ALL PROJECTS</p>
+				<span>
+					<RightArrowIcon fill="white" />
+				</span>
+			</button>
+		</section>
+	);
+};
+
+const ContactUs = () => {
 	return <section></section>;
 };
