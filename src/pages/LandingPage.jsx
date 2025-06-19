@@ -1,13 +1,15 @@
-import heroImage from "../assets/LandingPage/heroimage.png";
-import aboutOne from "../assets/LandingPage/about-one.png";
-import aboutTwo from "../assets/LandingPage/about-two.png";
-import aboutThree from "../assets/LandingPage/about-three.png";
-import ourProjectsOne from "../assets/OurProjects/ourprojects-one.png";
-import ourProjectsTwo from "../assets/OurProjects/ourprojects-two.png";
-import ourProjectsThree from "../assets/OurProjects/ourprojects-three.png";
-import ourProjectsFour from "../assets/OurProjects/ourprojects-four.png";
-import ourProjectsFive from "../assets/OurProjects/ourprojects-five.png";
+import heroImage from "../assets/landing-page/hero-section/heroimage.png";
+import aboutOne from "../assets/landing-page/about-us/about-one.png";
+import aboutTwo from "../assets/landing-page/about-us/about-two.png";
+import aboutThree from "../assets/landing-page/about-us/about-three.png";
+import ourProjectsOne from "../assets/landing-page/our-projects/our-projects-one.png";
+import ourProjectsTwo from "../assets/landing-page/our-projects/our-projects-two.png";
+import ourProjectsThree from "../assets/landing-page/our-projects/our-projects-three.png";
+import ourProjectsFour from "../assets/landing-page/our-projects/our-projects-four.png";
+import ourProjectsFive from "../assets/landing-page/our-projects/our-projects-five.png";
 import { LeftArrowIcon, RightArrowIcon } from "../assets/icons";
+import contactUsImage from "../assets/landing-page/contact-us/contact.png";
+
 export default function LandingPage() {
 	return (
 		<>
@@ -43,9 +45,9 @@ const HeroSection = () => {
 					</button>
 				</div>
 				<div className="flex items-center gap-6">
-					<p>01</p>
+					<p className="text-2xl text-[#BDBDBD]">01</p>
 					<span className="bg-[#E0E0E0] block w-[43.82px] h-[2px] rotate-[134.98deg]" />
-					<p>02</p>
+					<p className="text-2xl text-[#BDBDBD]">02</p>
 				</div>
 			</aside>
 			<figure className="w-full max-w-[770px] relative">
@@ -129,8 +131,8 @@ const MissionStatement = () => {
 
 const OurProjects = () => {
 	return (
-		<section className="mt-[120px] mb-[150px] py-[30px] mx-auto w-full max-w-[1170px] flex flex-col gap-[30px]">
-			<h1 className="font-light text-[#BDBDBD] text-[4rem] leading-[64px] mb-[20px]">
+		<section className="my-[120px] mx-auto w-full max-w-[1170px] flex flex-col items-end gap-[30px]">
+			<h1 className="font-light text-[#BDBDBD] text-[4rem] leading-[64px] mb-[20px] w-full">
 				Our Projects
 			</h1>
 
@@ -161,5 +163,55 @@ const OurProjects = () => {
 };
 
 const ContactUs = () => {
-	return <section></section>;
+	return (
+		<section className="my-[120px] mx-auto w-full max-w-[1170px] flex flex-col items-end gap-[30px]">
+			<h1 className="font-light text-[#BDBDBD] text-[4rem] leading-[64px] mb-[20px] w-full">
+				Our Projects
+			</h1>
+
+			<div className="flex gap-[30px] items-start w-full">
+				<form className="w-full max-w-[391px] flex flex-col">
+					<input
+						type="text"
+						name="name"
+						placeholder="Name"
+						className="w-full h-11.5 bg-[#f3f3f3] px-4 mb-[10px]"
+					/>
+					<input
+						type="tel"
+						name="phoneNumber"
+						placeholder="Phone Number"
+						className="w-full h-11.5 bg-[#f3f3f3] px-4 mb-[10px]"
+					/>
+					<input
+						type="email"
+						name="email"
+						placeholder="E-mail"
+						className="w-full h-11.5 bg-[#f3f3f3] px-4 mb-[10px]"
+					/>
+					<input
+						type="text"
+						name="interestedIn"
+						placeholder="Interested In"
+						className="w-full h-11.5 bg-[#f3f3f3] px-4 mb-[10px]"
+					/>
+					<textarea
+						type="text"
+						placeholder="Message"
+						className="w-full h-[147px] bg-[#f3f3f3] px-4 mb-[77px]"
+					/>
+					<button
+						type="button"
+						className=" bg-[#333333] w-[222px] h-[71px] flex items-center justify-center gap-[18px] px-[20px]"
+					>
+						<p className="tracking-[0.2em] text-[12px] leading-[12px] text-white">SEND EMAIL</p>
+						<span>
+							<RightArrowIcon fill="white" />
+						</span>
+					</button>
+				</form>
+				<img src={contactUsImage} alt="" />
+			</div>
+		</section>
+	);
 };
