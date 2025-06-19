@@ -24,8 +24,8 @@ export default function LandingPage() {
 
 const HeroSection = () => {
 	return (
-		<section className="max-w-[1170px] mx-auto px-4 xl:px-0 flex items-start justify-between">
-			<aside className="mt-[336px]">
+		<section className="max-w-[1170px] mx-auto px-6 xl:px-0 flex flex-col lg:flex-row items-start gap-16 lg:justify-between ">
+			<aside className="mt-16 lg:mt-[336px]">
 				<div>
 					<h1 className="font-light text-[#BDBDBD] text-[4rem] leading-[64px]">PROJECT</h1>
 					<p className="font-bold text-[#333333] text-[4rem] leading-[64px]">Lorum</p>
@@ -68,15 +68,15 @@ const HeroSection = () => {
 
 const AboutSection = () => {
 	return (
-		<section className="mt-[120px] mb-[150px] bg-[#FBFBFB] py-[30px] mx-auto w-full max-w-[1170px] flex gap-[30px] h-[435px] px-6 xl:px-0">
-			<aside className="w-full ml-[100px] max-w-[570px] flex gap-[30px] items-start">
-				<div className="flex flex-col items-start gap-[30px]">
+		<section className="mt-[120px] mb-[150px] bg-[#FBFBFB] py-[30px] mx-auto w-full max-w-[1170px] flex flex-col xl:flex-row gap-[30px]  xl:h-[435px] px-6 xl:px-0">
+			<aside className="w-full xl:ml-[100px] xl:max-w-[570px] flex flex-col xl:flex-row gap-[30px] items-start">
+				<figure className="flex flex-col items-start gap-[30px]">
 					<img src={aboutOne} alt="" className="w-full max-w-[270px]" />
 					<img src={aboutTwo} alt="" className="w-full max-w-[270px]" />
-				</div>
+				</figure>
 				<img src={aboutThree} alt="" className="mt-[30px] w-full max-w-[270px]" />
 			</aside>
-			<aside className="flex flex-col w-full max-w-[400px] mr-[70px]">
+			<aside className="flex flex-col w-full xl:max-w-[400px] xl:mr-[70px]">
 				<h1 className="font-light text-[#BDBDBD] text-[4rem] leading-[64px] mb-[20px]">About</h1>
 				<p className="font-light mb-[45px]">
 					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -101,11 +101,11 @@ const AboutSection = () => {
 
 const MissionStatement = () => {
 	return (
-		<section className="mt-[120px] mb-[150px] py-[30px] mx-auto w-full max-w-[1170px] flex flex-col gap-[60px]">
+		<section className="mt-[120px] mb-[150px] py-[30px] mx-auto w-full max-w-[1170px] flex flex-col gap-[60px] px-6 xl:px-0">
 			<h1 className="font-light text-[#BDBDBD] text-[4rem] leading-[64px]">
 				Main Focus/Mission Statement
 			</h1>
-			<div className="flex justify-between w-full">
+			<div className="flex flex-col lg:flex-row gap-16 lg:justify-between w-full">
 				<div className="flex gap-[30px] w-full max-w-[413px]">
 					<span className="font-black text-[#F2F2F2] text-[200px] leading-[200px] h-[140px] flex items-center justify-center">
 						1
@@ -131,19 +131,17 @@ const MissionStatement = () => {
 
 const OurProjects = () => {
 	return (
-		<section className="my-[120px] mx-auto w-full max-w-[1170px] flex flex-col items-end gap-[30px]">
+		<section className="my-[120px] mx-auto w-full max-w-[1170px] flex flex-col items-end gap-[30px] px-6 xl:px-0">
 			<h1 className="font-light text-[#BDBDBD] text-[4rem] leading-[64px] mb-[20px] w-full">
 				Our Projects
 			</h1>
 
-			<div className="flex flex-col gap-[30px]">
-				<div className="flex gap-[30px]">
-					<figure>
-						<img src={ourProjectsOne} alt="" />
-					</figure>
+			<div className="flex flex-col gap-[30px] w-full">
+				<div className="flex flex-col xl:flex-row gap-[30px]">
+					<img src={ourProjectsOne} alt="" />
 					<img src={ourProjectsTwo} alt="" />
 				</div>
-				<div className="flex gap-[30px]">
+				<div className="flex flex-col xl:flex-row gap-[30px]">
 					<img src={ourProjectsThree} alt="" />
 					<img src={ourProjectsFour} alt="" />
 					<img src={ourProjectsFive} alt="" />
@@ -164,13 +162,13 @@ const OurProjects = () => {
 
 const ContactUs = () => {
 	return (
-		<section className="my-[120px] mx-auto w-full max-w-[1170px] flex flex-col items-end gap-[30px]">
+		<section className="my-[120px] mx-auto w-full max-w-[1170px] flex flex-col items-end gap-[30px] px-6 xl:px-0">
 			<h1 className="font-light text-[#BDBDBD] text-[4rem] leading-[64px] mb-[20px] w-full">
 				Our Projects
 			</h1>
 
-			<div className="flex gap-[30px] items-start w-full">
-				<form className="w-full max-w-[391px] flex flex-col">
+			<div className="flex gap-[30px] items-start w-full flex-col lg:flex-row">
+				<form className="w-full lg:max-w-[391px] flex flex-col">
 					<input
 						type="text"
 						name="name"

@@ -16,7 +16,7 @@ export default function OurProjectsPage() {
 					<ProjectCard key={id} id={id} image={image} heading={heading} description={description} />
 				))}
 			</div>
-			<div className="flex gap-8 items-center mt-[60px] mb-[120px]">
+			<div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center mt-[60px] mb-[120px]">
 				<div className="flex items-center gap-6">
 					<p className="text-2xl text-[#333333]">01</p>
 					<span className="bg-[#E0E0E0] block w-[43.82px] h-[2px] rotate-[134.98deg]" />
@@ -71,7 +71,7 @@ const ProjectCard = ({ image, heading, description }) => {
 			<figure className="w-full lg:max-w-[670px]">
 				<img src={image} alt="" className="w-full h-full object-cover" />
 			</figure>
-			<div className="bg-[#FBFBFB] p-[30px] flex flex-col w-full lg:max-w-[570px]">
+			<div className="bg-[#FBFBFB] p-[16px] md:p-[30px] flex flex-col w-full lg:max-w-[570px]">
 				<h2 className="font-light text-[40px] ">{heading}</h2>
 				<p className="mt-8 lg:mt-18">{description}</p>
 
