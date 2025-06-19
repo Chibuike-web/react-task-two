@@ -16,7 +16,7 @@ export default function OurProjectsPage() {
 					<ProjectCard key={id} id={id} image={image} heading={heading} description={description} />
 				))}
 			</div>
-			<div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center mt-[60px] mb-[120px]">
+			<div className="flex flex-col sm:flex-row gap-8 items-start sm:items-center mt-[60px] mb-[60px] lg:mb-[120px]">
 				<div className="flex items-center gap-6">
 					<p className="text-2xl text-[#333333]">01</p>
 					<span className="bg-[#E0E0E0] block w-[43.82px] h-[2px] rotate-[134.98deg]" />

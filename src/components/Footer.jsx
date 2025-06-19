@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import {
 	EmailIcon,
 	FacebookLogo,
@@ -16,13 +17,31 @@ export default function Footer() {
 
 				<div className="flex flex-col gap-6">
 					<h4 className="text-base font-semibold mb-4">Information</h4>
-					<ul className="flex flex-col gap-4">
-						<li className="hover:text-gray-300 cursor-pointer">Main</li>
-						<li className="hover:text-gray-300 cursor-pointer">Gallery</li>
-						<li className="hover:text-gray-300 cursor-pointer">Projects</li>
-						<li className="hover:text-gray-300 cursor-pointer">Certifications</li>
-						<li className="hover:text-gray-300 cursor-pointer">Contacts</li>
-					</ul>
+					<div className="flex flex-col gap-4">
+						<Link
+							to="/"
+							className="hover:text-gray-300 cursor-pointer"
+							onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+						>
+							Main
+						</Link>
+						<Link
+							to="/photo-gallery"
+							className="hover:text-gray-300 cursor-pointer"
+							onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+						>
+							Gallery
+						</Link>
+						<Link
+							to="/our-projects"
+							className="hover:text-gray-300 cursor-pointer"
+							onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+						>
+							Projects
+						</Link>
+						<a className="hover:text-gray-300 cursor-pointer">Certifications</a>
+						<a className="hover:text-gray-300 cursor-pointer">Contacts</a>
+					</div>
 				</div>
 
 				<div className="flex flex-col gap-6">
